@@ -79,5 +79,4 @@ fin minmax
 			afficher "La moyenne vaut : " somme / cpt
 	fin si
 
-fin moyenne
-
+fin moyenne 
