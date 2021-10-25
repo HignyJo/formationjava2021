@@ -80,4 +80,3 @@ fin minmax
 	fin si
 
 fin moyenne
-
