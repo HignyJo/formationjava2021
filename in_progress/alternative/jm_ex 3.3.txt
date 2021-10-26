@@ -23,3 +23,63 @@ Exemple:
 Solution
 --------
  
+debut decomposition
+
+	variables locales
+		var somme :N <- 0
+	fin variables locales
+	
+	afficher "Entrez une somme : "
+
+	saisir somme
+
+	si somme >= 100
+		alors
+			afficher somme DIV 100 "Billets de 100"
+			somme <- somme - (somme DIV 100).100 // somme mod 100
+	fin si
+
+	si somme >= 50
+		alors
+			afficher somme DIV 50 "Billets de 50"
+			somme <- somme mod 50
+	fin si
+
+	si somme >= 20
+		alors
+			afficher somme DIV 20 "Billets de 20"
+			somme <- somme mod 20
+	fin si
+
+	si somme >= 5
+		alors
+			afficher somme DIV 5 "Billets de 5"
+			somme <- somme mod 5
+	fin si
+
+	si somme >= 2
+		alors
+			afficher somme DIV 2 "Pièces de 2"
+			somme <- somme mod 2
+	fin si
+
+	si somme >= 1
+		alors
+			afficher somme DIV 1 "Pièces de 1"
+			somme <- somme mod 1
+	fin si
+
+	si somme >= 0.5
+		alors
+			afficher somme DIV 0.5 "Pièces de 0.5"
+			somme <- somme mod 0.5
+	fin si
+
+	si somme mod 0.2 = 0
+		alors
+			afficher somme DIV 0.2 "Pièces de 0.2"
+		sinon
+			afficher (somme DIV 0.2)+ 1 "Pièces de 0.2"
+	fin si
+
+fin decomposition
