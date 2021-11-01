@@ -12,4 +12,83 @@ Attention :
 
 Solution
 --------
- 
+
+debut comparaisondetroisnombres
+	
+	variables locales
+		var a :N <- 0
+		var b :N <- 0
+		var c :N <- 0
+	fin variables locales
+	
+	afficher "Saisissez 3 nombres :"
+	saisir a
+	saisir b
+	saisir co
+	
+	si c < a
+		alors
+			si a > b
+				alors
+					si b = c
+						alors
+							afficher c " = " b " < " a
+						sinon
+							si b > c
+								alors
+									afficher b " < " c " < " a
+								sinon
+									afficher c " < " b " < " a
+							fin si
+					fin si
+			fin si
+			
+			si a < b
+				alors
+					afficher c " < " a " < " b
+				sinon
+					afficher c " < " a " = " b
+			fin si
+	fin si
+	
+	si c > a
+		alors
+			si a < b
+				alors
+					si b = c
+						alors
+							afficher a " < " b " = " c
+						sinon
+							si b > c
+								alors
+									afficher a " < " c " < " b
+								sinon
+									afficher a " < " b " < " c
+							fin si
+					fin si
+			fin si
+			
+			si a > b
+				alors
+					afficher b " < " a " < " c
+				sinon
+					afficher a " = " b " < " c
+			fin si
+	fin si
+	
+	si c = a
+		alors
+			si a = b
+				alors
+					afficher a " = " b " = " c
+			fin si
+			
+			si a > b
+				alors
+					afficher b " < " a " = " c
+				sinon
+					afficher a " = " c " < " b
+			fin si
+	fin si
+
+fin comparaisondetroisnombres
