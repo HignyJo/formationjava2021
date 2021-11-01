@@ -8,3 +8,29 @@
 Solution
 --------
  
+debut comparaisondedeuxnombres
+	
+	variables locales
+		var a :N <- 0
+		var b :N <- 0
+	fin variables locales
+	
+	afficher "Saisir a"
+	saisir a
+	
+	afficher "Saisir b"
+	saisir b
+	
+	si a > b
+		alors
+			afficher "Le plus grand nombre est " a
+		sinon
+			si a < b
+				alors
+					afficher "Le plus grand nombre est " b
+				sinon
+					afficher "Les deux nombres sont égaux"
+			fin si
+	fin si
+	
+fin comparaisondedeuxnombres
