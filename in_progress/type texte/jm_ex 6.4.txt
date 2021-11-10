@@ -1,0 +1,47 @@
+6.4	Sous-chaine
+---------------
+
+Ecrire le programme qui demande à l'utilisateur d'entrer un texte, une position de départ et une position de fin.
+
+Le programme affichera la sous-chaine composée des caractères se trouvant dans le texte entre la position de départ (comprise) et la position de fin (non comprise).
+
+Si les positions ne sont pas valides, le programme affiche un message d'erreur.
+
+Remarque : Ceci sans utiliser la fonction sousChaine()
+
+------------------------------------------------------------------------------------------------
+
+Solution
+--------
+
+debut souschaine
+	
+	variables locales
+		var texte	:T <- ""
+		var posDeb	:N <- 0
+		var posFin 	:N <- 0
+		var lgText	:N <- 0
+	fin variables locales
+	
+	afficher "Saisissez un texte :"
+	saisir texte
+	
+	lgText <- longueur(texte)
+	
+	afficher "Saisissez une position de début et de fin :"
+	saisir posDeb
+	saisir posFin
+	
+	si (posDeb >= 0 AND posDeb <= lgText)
+		alors
+			si (posFin > posDeb AND posFin >= 0 AND posFin <= lgText)
+				alors
+					sousChaine (texte, posDeb, posFin)
+				sinon
+					afficher "La position de fin doit être plus grande que la position du début"
+			fin si
+		sinon
+			afficher "Erreur"
+	fin si
+	
+fin souschaine

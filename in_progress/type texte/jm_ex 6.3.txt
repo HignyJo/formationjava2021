@@ -1,0 +1,51 @@
+6.3	Recherche remplacer
+-----------------------
+
+Ecrire le programme qui demande à l'utilisateur d'entrer un texte source et un texte à rechercher et un texte de remplacement
+
+Le programme affichera le texte source où toutes les occurences du texte à rechercher seront remplacées par le texte de remplacement
+
+------------------------------------------------------------------------------------------------
+
+Solution
+--------
+
+debut rechercheremplacer
+
+	variables locales
+		var texte1	:T <- ""
+		var texte2	:T <- ""
+		var texte3	:T <- ""
+		var LgText3	:N <- 0
+		var result	:T <- ""
+		var cpt		:N <- 0
+	fin variables locales
+	
+	afficher "Saisissez un texte source :"
+	saisir texte1
+	
+	afficher "Saisissez un texte à rechercher :"
+	saisir texte2
+	
+	afficher "Saisissez un texte de remplacement :"
+	saisir texte3
+	
+	result <- texte1
+	
+	LgText3 <- longueur(texte3)
+	
+	Tant que (cpt < LgText3)
+		result(cpt) <- texte3(cpt)
+		cpt <- cpt + 1
+	fin tant que
+	
+	afficher "Texte source : " + texte1
+	afficher "Texte recherché : " + texte2
+	afficher "Texte remplacement : " + texte3
+	afficher "Texte remplacé : " + result
+
+fin rechercheremplacer
+		
+	
+	
+	
