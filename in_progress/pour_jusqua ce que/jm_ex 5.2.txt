@@ -15,3 +15,32 @@ Exemple :
 
 Solution
 --------
+
+Debut sommeSuite
+    VARIABLES LOCALES : 
+        VAR val1 :N <- 0
+        VAR val2 :N <- 0
+        VAR somme :N <- 0
+        VAR cpt :N <- 0
+    FIN VARIABLES LOCALES
+
+    Afficher "Ce programme a pour but de calculer la somme des nombres entre deux valeurs entrées en clavier (incluses)"
+    Afficher "Valeur 1 : "
+    Saisir val1
+
+    Afficher "Valeur 2 : "
+    Saisir val2
+
+    SI val1 <= val2
+        ALORS
+            POUR cpt ALLANT DE val1 A val2
+                somme <- somme + cpt
+            cpt SUIVANT
+        SINON
+            POUR cpt ALLANT DE val2 A val1
+                somme <- somme + cpt
+            cpt SUIVANT
+    FINSI
+    
+    Afficher "La somme des nombres compris entre ", val1, " et ", val2, " vaut ", somme
+Fin sommeSuite
