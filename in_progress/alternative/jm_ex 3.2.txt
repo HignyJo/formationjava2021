@@ -8,29 +8,29 @@
 Solution
 --------
  
-debut comparaisondedeuxnombres
+debut comparaisondeuxnombres
 	
 	variables locales
 		var a :N <- 0
 		var b :N <- 0
 	fin variables locales
 	
-	afficher "Saisir a"
+	afficher "Saisir a : "
 	saisir a
 	
-	afficher "Saisir b"
+	afficher "Saisir b : "
 	saisir b
 	
-	si a > b
+	si (a > b)
 		alors
-			afficher "Le plus grand nombre est " a
+			afficher "Le plus grand nombre est : " a
 		sinon
-			si a < b
+			si (a < b)
 				alors
-					afficher "Le plus grand nombre est " b
+					afficher "Le plus grand nombre est : " b
 				sinon
-					afficher "Les deux nombres sont égaux"
+					afficher "Les deux nombres sont égaux."
 			fin si
 	fin si
 	
-fin comparaisondedeuxnombres
+fin comparaisondeuxnombres

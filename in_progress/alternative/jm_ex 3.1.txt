@@ -9,7 +9,7 @@ Le programme demande à l'utilisateur une valeur pour a et pour b et donne si po
 
 Solution
 --------
-
+ 
 debut equation
 	
 	variables locales
@@ -17,24 +17,22 @@ debut equation
 		var b :N <- 0
 	fin variables locales
 	
-	afficher "Saisir a"
+	afficher "Saisir a :"
 	saisir a
 	
-	afficher "Saisir b"
+	afficher "Saisir b :"
 	saisir b
 	
-	si a != 0
+	si (a != 0)
 		alors
-			afficher "La solution est x = " -b / a
+			afficher "La valeur de x est : " -b / a
 		sinon
-			si b = 0
+			si (b = 0)
 				alors
-					afficher "Equation indeterminee."
+					afficher "Equation indeterminée."
 				sinon
 					afficher "Equation impossible."
 			fin si
 	fin si
-
+	
 fin equation
- 
-
