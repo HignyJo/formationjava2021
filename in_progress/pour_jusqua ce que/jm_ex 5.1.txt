@@ -1,0 +1,42 @@
+5.1	Moyenne dans un intervalle
+------------------------------
+
+Ecrire le programme qui lit 30 nombres et affiche la moyenne des nombres compris entre 10 et 20
+
+------------------------------------------------------------------------------------------------
+
+Solution
+--------
+
+debut moyenne
+
+    variables locales 
+		var nombre : N <- 0
+		var somme : N <- 0
+		var cpt : N <- 0
+		var cptMoyenne : N <- 0
+    fin variables locales
+
+	afficher "entrez une suite de 30 nombres. Seul les nombres compris entre 10 et 20 seront pris en considération pour la moyenne"
+
+	pour cpt allant de 0 à 29 par pas de 1
+	
+		afficher "entrez un nombre. Nombre restant : ", 30-cpt
+		saisir nombre 
+		
+		si nombre <= 20 et nombre>=10
+			alors
+			somme <- somme + nombre
+			cptMoyenne <- cptMoyenne + 1
+		fin si
+		
+	cpt suivant
+	
+		si cptMoyenne != 0
+			alors
+				afficher cptMoyenne," nombre valide."
+				afficher "la moyenne est de ",somme/cptMoyenne
+			sinon
+				afficher "Aucun nombre valide. Moyenne = 0"
+		fin si
+fin moyenne 
