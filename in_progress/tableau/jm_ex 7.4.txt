@@ -1,0 +1,73 @@
+7.4	Inversion vecteur
+---------------
+
+Ecrire le programme qui inverse un tableau de 10 nombres
+
+------------------------------------------------------------------------------------------------
+
+Solution
+--------
+
+debut inversionVecteur
+	
+	variables locales
+		const taille  :N <- 10
+		var tableau	  :N [taille]
+		var tabInv	  :N [taille]
+		var ind1	  :N <- 0
+		var ind2	  :N <- taille
+		var cpt		  :N <- 0
+		var cpt1		  :N <- 0
+	fin variableslocales
+	
+	afficher "Saisissir 10 nombres : "
+	pour cpt1 allant de 0 a taille-1 par pas de 1
+		saisir tableau[cpt]
+	cpt1 suivant
+	
+	for cpt allant de 0 à taille-1 par pas de 1
+		tabInv[ind2] <- tableau[ind1]
+		ind2 <- ind2 - 1
+		ind1 <- ind1 + 1
+		afficher tabInv[cpt]
+	cpt suivant
+	
+fin inversionVecteur
+
+-----------------------------------
+
+debut inversionVecteur
+	
+	variables locales
+		const taille  :N <- 10
+		var tableau	  :N [taille]
+		var element	  :N <- 0
+		var cpt	  :N <- 0
+	fin variableslocales
+	
+	afficher "Saisissir 10 nombres : "
+	
+	pour cpt allant de 0 a taille-1 par pas de 1
+		saisir tableau[cpt]
+	cpt suivant
+	
+	cpt <- 0
+	
+	pour cpt allant de 0 à taille-1 par pas de 1
+		element <- tableau[cpt]
+		tableau[cpt] <- tableau[(taille-1) - (cpt+1)]
+		tableau[(taille-1) - (cpt+1)] <- element
+	cpt suivant
+	
+	cpt <- 0
+	
+	pour cpt allant de 0 à taille-1 par pas de 1
+		afficher tableau[cpt]
+	cpt suivant
+	
+fin inversionVecteur
+	
+	
+	
+	
+	

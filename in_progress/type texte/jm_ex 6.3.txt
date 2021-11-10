@@ -12,37 +12,40 @@ Solution
 
 debut rechercheremplacer
 
-	variables locales
-		var texte1	:T <- ""
-		var texte2	:T <- ""
-		var texte3	:T <- ""
-		var LgText3	:N <- 0
-		var result	:T <- ""
-		var cpt		:N <- 0
-	fin variables locales
-	
-	afficher "Saisissez un texte source :"
-	saisir texte1
-	
-	afficher "Saisissez un texte à rechercher :"
-	saisir texte2
-	
-	afficher "Saisissez un texte de remplacement :"
-	saisir texte3
-	
-	result <- texte1
-	
-	LgText3 <- longueur(texte3)
-	
-	Tant que (cpt < LgText3)
-		result(cpt) <- texte3(cpt)
-		cpt <- cpt + 1
-	fin tant que
-	
-	afficher "Texte source : " + texte1
-	afficher "Texte recherché : " + texte2
-	afficher "Texte remplacement : " + texte3
-	afficher "Texte remplacé : " + result
+	variable locales
+        var textSource :T <- ""
+        var textRech :T <- ""
+        var textremplace :T <- ""
+        var i : N <- 0
+        var tailleTextSource :N <- 0
+        var tailleTextRech :N <- 0
+        var tailleTextRemplace :N <- 0
+        var textBegin :T <-""
+        var textEnd : T <-""
+    fin de variable locales
+
+    affiche " entre un texte "
+    saisir textSource 
+    affiche "entre un text a recherche"
+    saisir textRech
+    affiche "entre le text a remplace"
+    saisir textRemplace
+    
+    tailleTextRech= longueur(textRech)
+    tailleTextRemplace= longueur(textRemplace)
+    repeter
+
+        tailleTextSource= longueur(textSource)
+        si souschaine(textSource,i,tailleTextRech)=textRech
+            alors
+                textBegin<-souschaine(textSource,0,i)
+                textEnd <- sousChaine(textSource,i,i+tailleTextRech)
+                textSource <- textBegin + textRemplace + textEnd
+            fin si
+        i<-i+1
+    jusqu a ce que i> tailleTextSource
+
+    affiche textSource
 
 fin rechercheremplacer
 		

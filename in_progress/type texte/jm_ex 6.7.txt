@@ -1,0 +1,38 @@
+6.7	Inversion mot
+-------------------
+
+Ecrire le programme qui demande à l'utilisateur d'entrer un texte.
+	Le programme affichera le texte en ayant inversé les mots.
+
+Remarques : Les mots sont des sous-chaines ne contenant pas d'espace.
+------------------------------------------------------------------------------------------------
+
+Solution
+--------
+
+debut inversionVecteur
+	
+	variables locales
+		var texte	  :T <- ""
+		var tableau	  :C
+		var cpt		  :N <- 0
+		var lgText	  :N <- 0
+		var ind1	  :N <- 0
+		var ind2	  :N <- 0
+	fin variableslocales
+	
+	afficher "Saisissir un texte : "
+	saisir texte
+	
+	lgText <- longueur(texte)
+	ind2 <- lgText
+	
+	for cpt allant de 0 à lgText-1 par pas de 1
+		tableau[ind2] <- texte[ind1]
+		ind2 <- ind2 - 1
+		ind1 <- ind1 + 1
+	cpt suivant
+	
+	afficher texte
+	
+fin inversionVecteur

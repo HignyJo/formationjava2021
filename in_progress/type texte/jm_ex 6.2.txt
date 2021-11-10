@@ -18,5 +18,39 @@ Solution
 
 debut recherchetexte
 
-	variables locales
-		var 
+	variable locales
+        var textRech 		:T <- ''
+        var textSource 		:T <- ""
+        var firstPosition 	:N <- -1
+        var lastPosition 	:N
+        var nbApparition 	:N <- 0
+        var tailleTextrect 	:N <- 0
+    fin variabls locales
+        
+
+    afficher "Saisissez un texte : "
+    saisir textSource 
+    afficher "Saisissez un texte à recherché : "
+    saisir textRech
+
+    tailleTextrect <- longueur(textRech)    
+    
+	pour i allant de 0 a longueur(textSource) par pas de 1
+            si sousChaine(textSource,i,tailleTextrect) == textRech
+                alors
+                    si firstPosition < 0
+                        alors
+                            firstPosition=i
+					fin si
+					
+                    nbApparition <- nbApparition+1
+                    lastPosition = i
+			finsi
+	cpt suivant
+
+    affiche "le premeir position est "+ firstPosition
+    affiche "le dernier position est "+ lastPosition
+    affiche "il est repete "+ nbApparition
+
+fin recherchetexte
+	

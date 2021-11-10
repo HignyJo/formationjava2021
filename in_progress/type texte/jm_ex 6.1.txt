@@ -16,36 +16,38 @@ Si le caractère ne se trouve pas dans le texte, le programme affichera un simpl
 Solution
 --------
 
-debut recherchecaratere
+debut rechercheCaractere
 
-	variables locales
-		var premPos	:N <- 0
-		var dernPos	:N <- 0
-		var cpt		:N <- 0
-		var lgText	:N <- 0
-		var texte	:T <- " "
-		var car		:T <- ' '
-		var nbCar	:N <- 0
-	fin variables locales
+    variable locales
+        var caracter				:C <- ''
+        var text 					:T <- ""
+        var firstPositionCaractere  :N <- 0
+        var lastPositionCaractere 	:N
+        var nbApparition 			:N <- 0
+    fin variables locales
+    
+    afficher "Saisissez un texte : "
+    saisir text
+    affiche "Saisissez un caractere"
+    saisir caracter
 	
-	afficher "Saisissez un texte"
-	saisir texte
-	
-	afficher "Saisissez un caractère"
-	saisir caractère
-	
-	lgText <- longueur (texte)
-	
-	tant que (cpt < lgText)
-		si (car = caract(texte, cpt))
-			alors
-				nbCar <- nbCar + 1
-				cpt <- cpt + 1
-		fin si
-	fin tant que
-	
-	afficher "Première position où le caractère apparait : " premPos
-	afficher "Dernière position où le caractère apparait : " dernPos
-	afficher "Le nombre apparait " + nbCar + " fois"
+    pour i allant de 0 a longueur(text)-1 par pas de 1
+        si caract(text,i) == caracter
+            alors
+                si nbApparition = 0
+                    alors
+                        firstPositionCaractere=i
 
-fin recherchecaratere
+                fin si
+
+				nbApparition <- nbApparition+1
+                lastPositionCaractere = i
+
+        finsi	
+	cpt suivant
+
+    afficher "Le premeir position est "+ firstPositionCaractere
+    afficher "Le dernier position est "+ lastPositionCaractere
+    afficher "Il est répeté "+ nbApparition
+	
+fin rechercheCaractere

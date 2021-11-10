@@ -1,0 +1,49 @@
+7.5	Supprimer espaces
+---------------------
+
+Ecrire le programme qui déplace les caractères espaces à la fin d'un vecteur de caractères.
+
+------------------------------------------------------------------------------------------------
+
+Solution
+--------
+
+debut supprimerEspaces
+
+	variables locales
+		var texte	:T <- "supprimer  les espaces "
+		var ind		:N <- 0
+		var taille	:N <- longueur(texte)
+		var tab		:C [taille]
+		var nbEsp	:N <- 0
+	fin variables locales
+	
+	for cpt allant de 0 a taille par pas de 1
+	
+		si caract(texte, cpt) != " "
+			alors
+				tab[cpt] <- caract(texte, cpt)
+				cpt <- cpt + 1
+					
+			sinon
+				si caract(texte, cpt) = " "
+					alors
+						nbEsp <- nbEsp + 1
+						cpt <- cpt +1
+				fin si
+		fin si
+	
+	cpt suivant
+	
+	for cpt allant de taille a taille-nbEsp+1 par pas de -1
+		tab[cpt] <- " "
+	cpt suivant
+	
+	for cpt allant de 0 a taille par pas de 1
+		afficher tab[cpt]
+	cpt suivant
+		
+	
+	
+	
+fin supprimerEspaces

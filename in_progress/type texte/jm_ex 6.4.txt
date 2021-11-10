@@ -45,3 +45,26 @@ debut souschaine
 	fin si
 	
 fin souschaine
+
+------------------------------------------------
+
+debut 6.4 
+    variable locales
+        var text :T <- ""
+        var posDepart: N <-0
+        var posFin: N <- 0
+        var i : N <-0
+        var reponse : T <- ""
+    fin de variable locales
+
+    affiche "entre un text"
+    saisir text
+    affiche "possition de depart"
+    saisir posDepart
+    affiche "possition de fin "
+    saisir posFin 
+    pour i allant de posDepart a posFin-1 par pas de 1
+        reponse<- reponse+ caract(i)
+    
+    affiche reponse
+fin 6.4
