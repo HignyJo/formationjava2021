@@ -51,3 +51,38 @@ debut rechercheCaractere
     afficher "Il est répeté "+ nbApparition
 	
 fin rechercheCaractere
+
+-------------------------------------------------
+
+debut 6.1
+    variable locales : 
+        var caracter :C <- ''
+        var text :T <- ""
+        var firstPositionCaractere : N <- 0
+        var lastPositionCaractere : N
+        var nbApparition : N <- 0
+        var i <-0
+    fin variables locales
+    
+    affiche " entre un texte "
+    saisir text 
+    affiche "entre un caractere"
+    saisir caracter
+    pour i allant de 0 a longueur(text)-1 par pas de 1
+        si caract(text,i) == caracter
+            alors
+                si nb = 0
+                    alors
+                        firstPositionCaractere=i
+
+                    fin si
+
+                nbApparition <- nbApparition+1
+                lastPositionCaractere = i
+
+            finsi
+
+    affiche "le premeir position est "+ firstPositionCaractere
+    affiche "le dernier position est "+ lastPositionCaractere
+    affiche "il est repete "+ nbApparition
+fin 6.1

@@ -1,0 +1,51 @@
+6.6	Inversion mot
+-------------------
+
+Ecrire le programme qui demande à l'utilisateur de rentrer deux textes.
+	Le programme affichera VRAI si le premier texte se situe après le deuxième dans l'orde alphabétique sinon il affichera FAUX.
+	
+Remarques : Les opérateurs de comparaison sur les textes ne peuvent pas être utililisés.
+			Algoritmique au seul niveau primaire.
+
+------------------------------------------------------------------------------------------------
+
+Solution
+--------
+
+debut 6.5 
+    variable locales
+        var text1 : T <- ""
+        var text2 : T <- ""
+        var i : N<- 0
+        var flag: n <- 0
+    fin de variable locales
+
+    affiche "entre le text 1"   
+    saisir text1
+    affiche "entre le text 2"
+    saisir text2
+
+    tant que longueur(text1)<i && longueur(text2)<i && flag=0
+        si caract(text1,i)==caract(text2,i)
+            alors
+                i<-i+1
+            sinon 
+                si caract(text1,i)<caract(text2,i)
+                    alors
+                        flag=1
+                    sinon 
+                        flag=2
+                    fin si
+            fin si
+    fin tant que 
+    
+    si flag =1 
+        alors   
+            affiche "text1  plus grand"
+        sinon si flag =2
+            affiche "text 2 plus grand"
+
+        sinon
+            affiche "text identique"
+        fin si
+fin 6.5

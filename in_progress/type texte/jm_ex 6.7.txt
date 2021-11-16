@@ -36,3 +36,25 @@ debut inversionVecteur
 	afficher texte
 	
 fin inversionVecteur
+
+---------------------------------------------
+
+debut 6.7 
+    variable locales
+        var text : T <-""
+        var TextInverseMot
+        var i : N <-0
+        var espace : N <- 0
+    fin de variable locales
+
+    affiche "entre un text"
+    saisi text
+    pour i allant de 0 a  longueur(text)-1 par pas de 1
+        si caract(text)= ' ' ou longueur(text)-1==i+1
+            alors
+                textInverseMot <- sousChaine(text,espace,i)+ textInverseMot
+                espace <-i
+            fin si
+    
+    affiche textInverseMot
+fin 6.7

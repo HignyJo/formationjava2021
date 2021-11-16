@@ -1,0 +1,25 @@
+6.6	Inversion mot
+-------------------
+
+Ecrire le programme qui demande à l'utilisateur d'entrer un texte.
+	Le programme affichera le texte en ayant inversé les caractères
+
+------------------------------------------------------------------------------------------------
+
+Solution
+--------
+
+debut 6.6 
+    variable locales
+        var text : T <- ""
+        var i : N <- 0
+        var textInverse : T <-""
+    fin variable locales
+
+    affiche "entre le text"
+    saisi text
+    pour i allant de longueur(text)-1 a 0 par pas de -1
+        textInverse<- textInverse+ caract(i)
+
+    affiche(textInverse)
+fin 6.6

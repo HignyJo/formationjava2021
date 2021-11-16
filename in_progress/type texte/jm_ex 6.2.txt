@@ -53,4 +53,41 @@ debut recherchetexte
     affiche "il est repete "+ nbApparition
 
 fin recherchetexte
+
+----------------------------------------------
+
+debut 6.2
+    variable locales
+        var textRech :T <- ''
+        var textSource :T <- ""
+        var firstPosition : N <- -1
+        var lastPosition : N
+        var nbApparition : N <- 0
+        var tailleTextrect : N <- 0
+        var i : N <-0
+    fin variabls locales
+        
+
+      affiche " entre un texte "
+    saisir textSource 
+    affiche "entre un text a recherche"
+    saisir textRech
+
+    tailleTextrect <- longueur(textRech)    
+    pour i allant de 0 a longueur(textSource) par pas de 1
+            si sousChaine(textSource,i,i+tailleTextrect+1) == textRech
+                alors
+                    si nbApparition = 0
+                        alors
+                            firstPosition=i
+                        fin si
+                    nbApparition <- nbApparition+1
+                    lastPosition = i
+                finsi
+
+    affiche "le premeir position est "+ firstPosition
+    affiche "le dernier position est "+ lastPosition
+    affiche "il est repete "+ nbApparition
+
+fin 6.2
 	

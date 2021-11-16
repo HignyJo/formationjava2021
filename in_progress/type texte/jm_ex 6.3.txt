@@ -48,7 +48,42 @@ debut rechercheremplacer
     affiche textSource
 
 fin rechercheremplacer
-		
-	
-	
-	
+
+-----------------------------------------------
+
+debut 6.3
+    variable locales
+        var textSource :T <- ""
+        var textRech :T <- ""
+        var textremplace :T <- ""
+        var i : N <- 0
+        var tailleTextSource :N <- 0
+        var tailleTextRech :N <- 0
+        var tailleTextRemplace :N <- 0
+        var textBegin :T <-""
+        var textEnd : T <-""
+    fin de variable locales
+
+    affiche " entre un texte "
+    saisir textSource 
+    affiche "entre un text a recherche"
+    saisir textRech
+    affiche "entre le text a remplace"
+    saisir textRemplace
+    
+    tailleTextRech= longueur(textRech)
+    tailleTextRemplace= longueur(textRemplace)
+    repeter
+
+        tailleTextSource= longueur(textSource)
+        si souschaine(textSource,i,tailleTextRech)=textRech
+            alors
+                textBegin<-souschaine(textSource,0,i+1)
+                textEnd <- sousChaine(textSource,i+1,i+tailleTextRech)
+                textSource <- textBegin + textRemplace + textEnd
+            fin si
+        i<-i+1
+    jusqu a ce que i> tailleTextSource
+
+    affiche textSource
+fin 6.3

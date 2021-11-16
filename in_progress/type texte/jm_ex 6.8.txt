@@ -1,0 +1,36 @@
+6.8	Inversion mot
+-------------------
+
+Ecrire le programme qui demande à l'utilisateur d'entrer un texte.
+	Le programme affichera le texte en ayant inversé les lettres de chaque mot.
+
+Remarques : Les mots sont des sous-chaines ne contenant pas d'espace.
+------------------------------------------------------------------------------------------------
+
+Solution
+--------
+
+debut 6.8
+    variable locales
+        var text: T <-""
+        var motInverse: T <-""
+        var mot: T <-""
+        var textInverse: T <-""
+        var position: N <-0
+        var i: N <-0
+        var j: N <-0
+    fin de variable locales
+
+    affiche "entre un text"
+    saisi text
+    pour i allant de 0 a longueur(text)-1 par pas de 1 
+        si caract(text,i) = ' ' ou longueur(text)-1==i+1
+            alors
+            mot = sousChaine(text,position,i+1)
+            pour j alant de longeur(mot)-1 a 0 par pas de -1
+                motInverse=motInverse+caract(mot,j)
+            
+            textInverse=textInverse+motInverse
+            position=i;
+            motInverse="";
+fin 6.8
