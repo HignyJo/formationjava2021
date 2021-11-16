@@ -1,0 +1,33 @@
+7.7	Somme des suivants
+----------------------
+
+Soit un tableau de 10 éléments déjà initialisés, écrire un programme qui modifie le tableau
+de telle manière que chaque élément reçoive la somme de tous les éléments d'indice supérieur
+ou égal à lui-même
+
+------------------------------------------------------------------------------------------------
+
+Solution
+--------
+
+debut sommeDesSuivants
+
+	variables locales
+		const taille  :N <- 10
+		var tableau   :N [taille]
+		var cpt		  :N <- 0
+		var ind		  :N <- 0
+	fin variables locales
+	
+	for cpt allant de 0 à taille-1 par pas de 1
+		
+		tableau[cpt] <- tableau[cpt] * 2
+		for ind allant de cpt à taille-1 par pas de 1
+			
+			tableau[cpt] <- tableau[cpt] + tableau[ind+1]
+			
+		ind suivant
+		
+	cpt suivant
+	
+fin sommeDesSuivants

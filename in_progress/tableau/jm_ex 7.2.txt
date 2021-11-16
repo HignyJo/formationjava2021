@@ -8,7 +8,36 @@ Ecrire le programme qui affiche le maximum et le minimum des valeurs d'un vecteu
 Solution
 --------
 
-debut minmax
-	
+debut minmax;
+     
 	variables locales
-		
+		const taille  :N <- 10
+		var tableau	  :N [taille]
+		var min, max  :N <- 0
+		var posMin	  :N <- 0
+		var posMax    :N <- 0
+		var ind		  :N <- 0
+	fin variables locales
+     
+/*	min <- tableau[0];
+*	max <- tableau[0];
+*/	Pour ind allant de 1 à taille-1 faire
+	 
+    Pour ind allant de 0 à taille-1 faire
+        si (tableau[ind] < min) 
+			alors
+				min <- tableau[ind];
+				posMin <- ind
+			sinon 
+				si (tableau[ind] > max)
+					alors
+						max <- tableau[ind];
+						posMax <- ind
+				fin si
+		fin si
+    finpour
+     
+	afficher "Le min est : " min " et sa poition est : " posMin
+    afficher "Le max est : " max " et sa poition est : " posMax
+	
+fin minmax

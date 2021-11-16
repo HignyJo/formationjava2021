@@ -26,4 +26,6 @@ debut vecteurx2
 		afficher tableau[ind]
 	jusqu'a ce que (ind = 15)
 	
+//	afficher tableau
+	
 fin vecteurx2
