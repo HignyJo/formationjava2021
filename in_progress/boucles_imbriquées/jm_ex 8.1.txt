@@ -1,0 +1,30 @@
+8.1 Tables de multiplication
+----------------------------
+
+Ecrire le programme qui affiche les tables de multiplication de 1 à 10.
+
+( 1 x 1 = 1  à 10 x 10 = 100)
+
+------------------------------------------------------------------------------------------------
+
+Solution
+--------
+
+debut multiplication
+
+	variables locales
+		var nombre :N <- 0
+		var multi  :N <- 0
+		var result :N <- 0
+	fin variables locales
+	
+	pour nombre allant de 0 à 10 par pas de 1 faire
+		
+		pour multi allant de 0 à 10 par pas de 1 faire
+			result <- nombre * multi
+			afficher nombre " x " multi " = " result
+		multi suivant
+		
+	nombre suivant
+	
+fin multiplication

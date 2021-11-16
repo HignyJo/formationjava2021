@@ -1,0 +1,58 @@
+8.3 Nombres parfaits
+--------------------
+
+Ecrire le programme qui affiche les nombres parfaits inférieurs à 100.
+
+	Un nombre parfait est un entier égal à la somme de ses diviseurs sauf lui-même
+
+------------------------------------------------------------------------------------------------
+
+Solution
+--------
+
+debut nombresParfaits
+
+	variables locales
+		var a :N <- 0
+		var b :N <- 0
+		var c :N <- 0
+		var d :N <- 0
+	fin variables locales
+
+	pour a allant de 1 a 100 faire
+		c <- 0
+
+		pour d allant de 1 à (a DIV 2) faire
+			si (a MOD d = 0)
+				alors
+					c <- c + d
+			fin si
+		fin pour
+		
+		si (c = a)
+			alors
+				afficher nb " est un nombre parfait."
+		fin si
+		
+	fin pour
+  
+Fin nombresParfaits
+
+-----------------------------
+
+Algorithme parfaits
+  Variables
+    i, n, s, j : Entier
+Début
+  Pour i de 1 à 1000 Faire
+    s<-- 0
+    Pour j de 1 à (i Div 2) Faire
+      Si((i Mod j) = 0) Alors
+        s <-- s + j
+      FinSi
+    FinPour
+    Si(s = i) Alors
+      Ecrire(i,” est un nombre parfait”)
+    FinSi
+  FinPour
+Fin.
