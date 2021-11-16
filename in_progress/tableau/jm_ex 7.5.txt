@@ -18,7 +18,7 @@ debut supprimerEspaces
 		var nbEsp	:N <- 0
 	fin variables locales
 	
-	for cpt allant de 0 a taille par pas de 1
+	for cpt allant de 0 a taille-1 par pas de 1
 	
 		si caract(texte, cpt) != " "
 			alors
