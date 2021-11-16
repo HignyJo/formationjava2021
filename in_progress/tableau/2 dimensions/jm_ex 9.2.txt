@@ -1,0 +1,66 @@
+9.2 Copie tableau
+---------------------------------
+
+Ecrire le programme qui copie les éléments d'un tableau à 2 dimensions dans un tableau à
+une dimension du nombre de cases.
+
+	1. Faire l'exercice en utilisant 3 variables d'indice.
+	2. Faire l'exercice en utilisant 2 variables d'indice.
+	3. Faire l'exercice en utilisant 1 variable  d'indice.
+
+------------------------------------------------------------------------------------------------
+
+|-------------|
+| Solution 1. |
+|-------------|
+
+debut copieTableau
+
+	variables locales
+		const taille  :N <- 10
+		const taille2 :N <- taille*taille
+		var tableau	  :N [taille][taille]
+		var tableau2  :N [taille2]
+		var ind1	:N <- 0
+		var ind2	:N <- 0
+		var ind3	:N <- 0
+	fin variables locales
+	
+	pour ind1 allant de 0 à taille-1 faire
+		pour ind3 allant de 0 à taille2(-1)
+			tableau2[ind3] <- tableau[ind1][ind2]
+			ind2 <- ind2 + 1
+		ind1 suivant
+	ind3 suivant
+	
+fin copieTableau
+
+|-------------|
+| Solution 2. |--------------------------------------------------------------------------------
+|-------------|
+
+debut copieTableau
+
+	variables locales
+		const taille  :N <- 10
+		var tableau	  :N [taille][taille]
+		
+		
+	fin variables locales
+	
+fin copieTableau
+
+|-------------|
+| Solution 3. |--------------------------------------------------------------------------------
+|-------------|
+
+debut copieTableau
+
+	variables locales
+		const taille  :N <- 10
+		var tableau	  :N [taille][taille]
+		
+		
+	fin variables locales
+	
+fin copieTableau
