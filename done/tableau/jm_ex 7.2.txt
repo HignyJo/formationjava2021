@@ -26,12 +26,12 @@ debut minmax;
     Pour ind allant de 0 à taille-1 faire
         si (tableau[ind] < min) 
 			alors
-				min <- tableau[ind];
+				min <- tableau[ind]
 				posMin <- ind
 			sinon 
 				si (tableau[ind] > max)
 					alors
-						max <- tableau[ind];
+						max <- tableau[ind]
 						posMax <- ind
 				fin si
 		fin si
@@ -41,3 +41,42 @@ debut minmax;
     afficher "Le max est : " max " et sa poition est : " posMax
 	
 fin minmax
+
+-------------------------------------------------------------------------
+
+debut 7.2
+
+    variable locales
+        const TAILLE:N <-10
+        var array:N[TAILLE]
+        var min : N 
+        var max : N 
+        var posMin : N <-0
+        var posMax : N<-0 
+        var i :N <-0
+    fin de varialbe locales
+    
+    pour i allant de 0  a taille par pas de 1
+        affiche "entre la valeur n " + i+1
+        saisir array[i]
+    i suivant 
+
+    min <- array[0]
+    max<-array[0]
+
+    pour i allant de 1 a taille par pas de 1
+        si min< array[i]
+            alors
+                min = array[i]
+                posMin = i
+            fin si 
+        si max> array[i]
+            alors
+                max = array[i]
+                posMax = i
+            fin si 
+    i suivant 
+
+    affiche "min " + min + " position "+posMin
+    affiche "max " + max + " position "+posMax
+fin 7.2

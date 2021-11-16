@@ -66,6 +66,31 @@ debut inversionVecteur
 	cpt suivant
 	
 fin inversionVecteur
+
+-------------------------------------
+
+debut 7.4
+    variable locales
+       const TAILLE:N <-10
+        var Array:N[TAILLE]
+        var i : N <- 0
+        var val:N <-0
+    fin variable locales
+
+     pour i allant de 0  a taille-1 par pas de 1
+        affiche "entre la valeur n " + i+1
+        saisir array[i]
+    i suivant
+     pour i allant de 0  a (TAILLE DIV 2)-1 par pas de 1
+        val=array[TAILLE-1-i]
+        array[taille-1-i]=array[i]
+        array[i]=val
+    i suivant
+    pour i allant de 0  a taille-1 par pas de 1
+        affiche array[i]
+    i suivant
+        
+fin 7.4
 	
 	
 	

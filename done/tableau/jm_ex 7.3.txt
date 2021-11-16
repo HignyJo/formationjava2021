@@ -29,3 +29,19 @@ debut vecteurx2
 //	afficher tableau
 	
 fin vecteurx2
+
+-----------------------------------------------------------------------------------
+
+debut 7.3
+    variable locales
+        const TAILLE:N <-16
+        var Array:N[TAILLE]
+        var i:N <-0
+    fin de variable locales
+    
+    array[0]=1
+
+    pour i allant de 1 a taille-1 par pas de 1 
+        array[i]=array[i-1]*2
+    i suivant
+fin 7.3

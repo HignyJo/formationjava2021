@@ -43,10 +43,14 @@ debut copieTableau
 
 	variables locales
 		const taille  :N <- 10
+		const taille2 :N <- taille*taille
 		var tableau	  :N [taille][taille]
-		
-		
+		var tableau2  :N [taille2]
+		var ind1	:N <- 0
+		var ind2	:N <- 0
 	fin variables locales
+	
+	
 	
 fin copieTableau
 
@@ -58,9 +62,12 @@ debut copieTableau
 
 	variables locales
 		const taille  :N <- 10
+		const taille2 :N <- taille*taille
 		var tableau	  :N [taille][taille]
-		
-		
+		var tableau2  :N [taille2]
+		var ind1	:N <- 0
 	fin variables locales
+	
+	
 	
 fin copieTableau

@@ -1,0 +1,32 @@
+9.6 Diagonales d'un tableau rectangulaire
+-----------------------------------------
+
+Ecrire le programme qui initialise les cases de la diagonale principale d'un tableau rectangulaire avec la valeur 1.
+
+Exemple :		| 1 | 1 | 1 |   |   |   |   |   |   |   |   |
+				|   |   |   | 1 | 1 | 1 |   |   |   |   |   |
+				|   |  	|   |   |   |   | 1 | 1 |   |   |   |
+				|   |   |   |   |   |   |   |   | 1 | 1 | 1 |
+
+------------------------------------------------------------------------------------------------
+
+Solution
+--------
+
+debut ex9.6
+
+	variables locales
+		const taille  :N <- 4
+		const taille2 :N <- 11
+		var tableau	  :N [taille][taille2]
+		var ind, ind2 :N <- 0
+	fin variables locales
+	
+	pour ind allant de 0 à taille-1 par pas de 1 faire
+		pour ind2 allant de 0 à taille2-1 par pas de 1 faire
+			tableau[ind][ind2] <- 1
+		ind2 suivant
+		
+	ind suivant
+		
+fin ex9.6

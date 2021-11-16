@@ -31,3 +31,20 @@ debut sommeDesSuivants
 	cpt suivant
 	
 fin sommeDesSuivants
+
+---------------------------
+
+debut 7.7
+    variable locales
+        const TAILLE:N <-10
+        var array:N[TAILLE] <- 120,15,87,14,....
+        var i:N=0
+    fin de variable locale
+
+    pour i allant de  TAILLE-2  a 0 par pas  de -1 
+        array[i]=array[i]+array[i+1]
+    I SUIVANT 
+     pour i allant de  0  a TAILLE par pas  de 1 
+        affiche taille[i]
+    I SUIVANT 
+fin 7.7

@@ -21,13 +21,13 @@ debut plusOuMoins
 	variables locales
 		const taille  :N <- 10
 		var tab		  :N [taille]
-		var tab2	  :N [taille]
+		var tab2	  :B [taille]
 		var tab3      :N [taille]
 		var ind		  :N <- 0
 	fin variables locales
 	
-	tab1 <- [  10,   -5,   -6,   48,   20,   -6,   13,   56,  -89,  108]
-	tab2 <- [VRAI, FAUX, FAUX, VRAI, VRAI, FAUX, FAUX, VRAI, FAUX, FAUX]
+/*	tab1 <- [  10,   -5,   -6,   48,   20,   -6,   13,   56,  -89,  108]
+*/	tab2 <- [VRAI, FAUX, FAUX, VRAI, VRAI, FAUX, FAUX, VRAI, FAUX, FAUX]
 	
 	repeter
 		si tab2[ind] = false
@@ -42,3 +42,33 @@ debut plusOuMoins
 		
 		ind <- ind + 1
 	jusqu'a ce que (ind = 9)
+	
+-----------------------------------------------------------------------------------------------
+
+debut 7.6
+    variable locales
+        const TAILLE:N <-10
+        var array:N[TAILLE]
+        var arrayBoolean:B[TAILLE]
+        var array2:N[TAILLE]
+        var i:N=0
+    fin de variable locale
+
+    pour i allant de  0 a TAILLE-1 par pas de 1
+        affiche "entre la valeur"
+        saisi array[i]
+        affiche "entre la logique"
+        saisi arrayBoolean[i]
+    i suivant 
+    pour i allant de 0 a TAILLE-1 par pas de 1
+        si arrayBoolean[i]=faux
+            alors
+                array2[i]=-array[i]
+            sinon
+                array2[i]=array1[i]
+            fin si 
+    I SUIVANT 
+    pour i allant de 0 a TAILLE-1 par pas de 1 
+        affiche array2[i]
+  I SUIVANT 
+fin 7.6

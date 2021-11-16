@@ -1,0 +1,47 @@
+9.3 Moyenne, min, max, par ligne
+--------------------------------
+
+Ecrire le programme qui affiche la moyenne, le maximum et le minimum de chaque ligne
+d'un tableau à deux dimensions.
+
+------------------------------------------------------------------------------------------------
+
+Solution
+--------
+
+debut ex9.3
+	
+	variables locales
+		const taille    :N <- 10
+		var tableau	    :N [taille][taille]
+		var moyenne     :N <- 0
+		var somme		:N <- 0
+		var min, max    :N <- 0
+		var ind1, ind2  :N <- 0
+	fin variables locales
+	
+	pour ind1 allant de 0 à taille-1 faire
+		
+		pour ind2 allant de 0 à taille-1 faire
+			si (tableau[ind1][ind2] < min) 
+				alors
+					min <- tableau[ind1][ind2]]
+				sinon 
+					si (tableau[ind1][ind2] > max)
+						alors
+							max <- tableau[ind1][ind2]
+					fin si
+			fin si
+			
+			somme <- somme + tableau[ind1][ind2]
+		ind2 suivant
+		
+		moyenne <- somme / taille
+		afficher "Max : " + max + ". Min : " + min + ". Moyenne : " + moyenne
+		
+		moyenne     :N <- 0
+		somme		:N <- 0
+		min, max    :N <- 0
+	ind1 suivant
+	
+fin ex9.3
