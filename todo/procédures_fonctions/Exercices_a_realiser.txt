@@ -1,0 +1,36 @@
+//-------------------
+function/methode
+
+-ecrire un programme qui demande 2 nombres et affiche leur sommes
+
+-ecrire un programme qui demande 2 nombres et affiche dit le qu'elle
+est le plus petit et le plus grand
+
+-ecrire un programme qui demande la longueur et la largeur d'une rectangle
+et affiche son aire
+
+-ecrire un programme qui deamnade le rayon d'un cercle et affoche son aire
+
+-ecrire un programme qui demande de rentre un nombre, puis demande si on
+valide cette ce nombre et si il dit non on redemande de rentre un nombre,
+puis on, demande de rentre un caractere et demande si on valide ce caractere,
+si il dit non on redemande de rentre un caractere
+
+-ecrire un programme qui functionne comme une calculette (rentre 2 nombres et
+puis rendre l'operateur et avoir le resultat)
+
+-ecrire un programme où on peut enregistre 20 personnes et a l'aide d'un menu,
+on peut ajouter/ modifier / supprime /affiche /quitter
+
+//----------------------
+
+structure
+
+-ecrire un programme où on a une liste de 10 pays avec le nom du pays, la temparature
+max et min et pourvoir trouve le pays avec la temerature min et max
+
+-ecrire un programme ou un héro et un mechant ce bat, ils ont des pv et une endurance,
+leur force est calucle par rapport à leur (pv * endurance)²/pv, affiche chaque tour avec leur pv restant et affiche le gagnant
+
+-ecrire un programme avec une structure client, list d'achat, date, article et on sait
+quelle article le client a achete avec la date et on peut ajout/modifier/delete/affiche
