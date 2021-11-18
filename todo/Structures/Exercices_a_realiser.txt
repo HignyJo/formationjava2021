@@ -1,0 +1,12 @@
+//----------------------
+
+structure
+
+-ecrire un programme où on a une liste de 10 pays avec le nom du pays, la temparature
+max et min et pourvoir trouve le pays avec la temerature min et max
+
+-ecrire un programme ou un héro et un mechant ce bat, ils ont des pv et une endurance,
+leur force est calucle par rapport à leur (pv * endurance)²/pv, affiche chaque tour avec leur pv restant et affiche le gagnant
+
+-ecrire un programme avec une structure client, list d'achat, date, article et on sait
+quelle article le client a achete avec la date et on peut ajout/modifier/delete/affiche

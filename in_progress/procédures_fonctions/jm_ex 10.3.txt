@@ -8,3 +8,29 @@ et affiche son aire
 
 Solution
 --------
+
+Fonction aireR (
+    in longueur :N
+    in largeur  :N
+):N
+
+    variables locales
+        var aire :N <- 0
+    fin variables locales
+	
+	aire <- longueur * largeur
+	retourne aire
+	
+fin aireR
+
+debut aireRectangle
+	
+	afficher "Entrez une valeur pour la longueur : "
+	saisir longueur
+	
+	afficher "Entrez une valeur pour la largeur : "
+	saisir largeur
+	
+	afficher aireR(longueur,largeur)
+	
+fin aireRectangle

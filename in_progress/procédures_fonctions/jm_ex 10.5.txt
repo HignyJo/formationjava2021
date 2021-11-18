@@ -1,12 +1,82 @@
 10.5
 -------------------------------
 
-Ecrire un programme qui demande de rentre un nombre, puis demande si on
-valide cette ce nombre et si il dit non on redemande de rentre un nombre,
-puis on, demande de rentre un caractere et demande si on valide ce caractere,
-si il dit non on redemande de rentre un caractere
+Ecrire un programme qui demande de rentrer un nombre, puis demande si on
+valide ce nombre. Si le nombre n'est pas validé, on redemande de rentrer un nombre
+jusqu'à validation.
+Ensuite, on demande de rentrer un caractere, puis demande si on
+valide ce caractere. Si le caractere n'est pas validé, on redemande de rentrer un caractere
+jusqu'à validation.
 
 ------------------------------------------------------------------------------------------------
 
 Solution
 --------
+
+---------------
+| Avec Boucle |
+---------------
+
+debut 10.5
+
+	variables locales
+		var nombre		:N <- 0
+		var caractere	:C <- ""
+		var validation	:B <- false
+	fin variables locales
+	
+	tant que (validation = false)
+		afficher "Entrer un nombre : "
+		saisir nombre
+		
+		afficher "Validez vous votre entrée ? (True=Oui / False=Non)
+		saisir validation
+	fin tant que
+	
+	validation <- false
+	
+	tant que (validation = false)
+		afficher "Entrer un caractere : "
+		saisir caractere
+		
+		afficher "Validez vous votre entrée ? (True=Oui / False=Non)
+		saisir validation
+	fin tant que
+
+---------------	
+| Sans Boucle |
+---------------
+
+PROCEDURE choix (in TYPE: T)                                
+   Variables locales
+     nb : N <- 0
+     Caract : C <- ''
+     choix :B <- FAUX
+   Fin variables locales
+       
+   TANT QUE choix = FAUX
+      Afficher "Entrer un", TYPE
+         Si TYPE = "caractère" 
+             Alors 
+                Saisir Caract
+             Sinon 
+                Saisir nb 
+         Finsi 
+      Afficher "Etes-vous sur de votre choix ?"
+      Saisir choix 
+    fin TANT QUE 
+  Fin choix
+
+
+DebutChoix
+  Variables locales
+    type :T <- "nombre" 
+  Fin variables locales 
+
+   Afficher choix(type)
+   type <- "caractère"
+   Afficher choix(type)
+FinChoix
+	
+	
+

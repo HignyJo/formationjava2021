@@ -1,10 +1,43 @@
 10.2 
 -------------------------------
 
-Ecrire un programme qui demande 2 nombres et affiche dit le qu'elle est le plus petit et
+Ecrire un programme qui demande 2 nombres et affiche lequel est le plus petit et lequel est
 le plus grand
 
 ------------------------------------------------------------------------------------------------
 
 Solution
 --------
+
+PROCEDURE plusPetitPlusGrand(
+    in nb1:N,
+    in nb2:N,
+    out plusPetit:N,
+    out plusGrand:N
+)
+    Si nb1<nb2
+        alors
+            plusPetit<-nb1
+    Sinon
+      Si nb1>nb2
+      Alors
+        plusGrand<-nb1
+      Fin si
+    Fin si
+Fin plusPetitPlusGrand
+Debut recherchePlusPetitOuPlusGrand
+    variables locales:
+        var nb1:N <-0
+        var nb2:N <-0
+        var plusPetit:N <-0
+        var plusGrand:N <-0
+    fin variables locales
+    afficher "Demander un premier nombre"
+    saisir nb1
+    afficher "Demande un deuxième nombre"
+    saisir nb2
+    
+    plusPetitPlusGrand(nb1,nb2,plusPetit,plusGrand)
+    
+    Afficher "Le nombre le plus petit est: " plusPetit, ", le nombre le plus grand est: ", plusGrand
+Fin recherchePlusPetitOuPlusGrand

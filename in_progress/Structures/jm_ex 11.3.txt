@@ -1,0 +1,12 @@
+11.3
+-------------------------------
+
+Ecrire un programme avec une structure client, liste d'achat, date, article.
+On sait quel article le client a acheté avec la date d'achat.
+On peut ajouter/modifier/Supprimer/afficher.
+
+------------------------------------------------------------------------------------------------
+
+Solution
+--------
+

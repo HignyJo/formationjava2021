@@ -1,9 +1,31 @@
 10.4
 -------------------------------
 
-Ecrire un programme qui deamnade le rayon d'un cercle et affoche son aire
+Ecrire un programme qui demande le rayon d'un cercle et affiche son aire
 
 ------------------------------------------------------------------------------------------------
 
 Solution
 --------
+
+fonction aireC (
+	in rayon :N
+):N
+
+	variables locales
+		var aire :N <- 0
+	fin variables locales
+	
+	aire <- (rayon*rayon) * PI
+	retourne aire
+	
+fin aireC
+
+debut aireCercle
+
+	afficher "Entrez une valeur pour le rayon
+	saisir rayon
+	
+	afficher aireC(rayon)
+	
+fin aireCercle

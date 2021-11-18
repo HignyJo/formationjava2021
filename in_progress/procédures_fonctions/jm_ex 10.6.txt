@@ -1,10 +1,85 @@
 10.6
 -------------------------------
 
-Ecrire un programme qui functionne comme une calculette (rentre 2 nombres et
+Ecrire un programme qui fonctionne comme une calculette (rentre 2 nombres et
 puis rendre l'operateur et avoir le resultat)
 
 ------------------------------------------------------------------------------------------------
 
 Solution
 --------
+
+fonction Calcule (
+	in signe :C,
+	in nb1	 :N,
+	in nb2	 :N
+	
+):N
+
+	variables locales
+		var resultat :N <- 0
+		var erreur	 :T <- ""
+	fin variables locales
+
+/***********	si (signe = "+")
+					alors
+						resultat <- nb1 + nb2
+					
+				fin si
+				
+				si (signe = "-")
+					alors
+						resultat <- nb1 - nb2
+				fin si
+				
+				si (signe = "*")
+					alors
+						resultat <- nb1 * nb2
+				fin si
+				
+				si (signe = "/")
+					alors
+						si (nb2 != 0)
+							alors
+								resultat <- nb1 / nb2
+							sinon
+								erreur <- "Impossible de diviser par 0"
+***********/	fin si
+	
+	cas ou signe
+		cas "+"
+			resultat <- nb1 + nb2
+		cas "-"
+			resultat <- nb1 - nb2
+		cas "*"
+			resultat <- nb1 * nb2
+		cas "/"
+			si (nb2 != 0)
+				alors
+					resultat <- nb1 / nb2
+				sinon
+					erreur <- "Impossible de diviser par 0"
+		autre cas
+			afficher "Choix non valide !"
+	fin cas ou
+			
+	
+	retourne resultat
+	retourne erreur
+
+fin Calcule
+
+debut Calculatrice
+
+	afficher "Entrez une première valeur : "
+	saisir nb1
+	
+	afficher "Choisissez un signe : (+, -, *, /) "
+	saisir signe
+	
+	afficher "Entrez une deuxième valeur : "
+	saisir nb2
+	
+	afficher Calcule(nb1, signe, nb2)
+
+fin Calculatrice

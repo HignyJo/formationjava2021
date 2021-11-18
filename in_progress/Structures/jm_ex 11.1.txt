@@ -1,0 +1,45 @@
+11.1
+-------------------------------
+
+Ecrire un programme où on a une liste de 10 pays avec le nom du pays, la temparature
+max et min. On doit pouvoir trouver le pays avec la temparature min et max.
+
+------------------------------------------------------------------------------------------------
+
+Solution
+--------
+
+structure infosPays
+	var nom :T
+	var tempmin :N
+	var tempmax :N
+fin structure
+
+debut listePays
+
+	variables locales
+		const taille :N <- 10
+		var listePays[taille]
+		var cpt :N <- 0
+		var Pays : infosPays
+	fin variables locales
+	
+	Pour cpt allant de 0 à 9 par pas de 1 faire
+		Pays <- créer infosPays
+		afficher "Entrez le nom d'un pays : "
+			saisir Pays.nom
+		afficher "Entrez la temparaturemin du pays : "
+			saisir Pays.tempmin
+		afficher "Entrez la temparaturemin du pays : "
+			saisir Pays.tempmin
+		listePays[cpt].Pays.nom <- Pays.nom
+		listePays[cpt].Pays.tempmin <- Pays.tempmin
+		listePays[cpt].Pays.tempmax <- Pays.tempmax
+	cpt suivant
+	
+	cpt <- 0
+	
+	Pour cpt allant de 0 à 9 par pas de 1 faire
+		afficher "| Nom : " + Pays.nom + " | TempMin : " + Pays.tempmin + " | TempMin : " + Pays.tempmax + " |"
+	
+fin listePays

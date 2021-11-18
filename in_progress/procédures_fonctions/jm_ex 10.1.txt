@@ -7,3 +7,27 @@ Ecrire un programme qui demande 2 nombres et affiche leur sommes
 
 Solution
 --------
+
+
+
+-----------------------------------
+
+Fonction somme2Nombres(
+    in nb1:N,
+    in nb2:N
+):N
+    variables locales:
+        var somme:N <-0
+    fin variables locales
+
+    somme <- nb1 + nb2
+    retourne somme
+Fin somme2Nombres
+
+Debut main
+    afficher "Demander un premier nombre"
+    saisir nb1
+    afficher "Demander un deuxième nombre"
+    saisir nb2
+    Afficher somme2Nombres(nb1,nb2)
+Fin main
