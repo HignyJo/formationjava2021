@@ -1,0 +1,10 @@
+10.6
+-------------------------------
+
+Ecrire un programme qui functionne comme une calculette (rentre 2 nombres et
+puis rendre l'operateur et avoir le resultat)
+
+------------------------------------------------------------------------------------------------
+
+Solution
+--------

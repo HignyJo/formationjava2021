@@ -1,0 +1,10 @@
+10.3
+-------------------------------
+
+Ecrire un programme qui demande la longueur et la largeur d'une rectangle
+et affiche son aire
+
+------------------------------------------------------------------------------------------------
+
+Solution
+--------

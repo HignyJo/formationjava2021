@@ -1,0 +1,10 @@
+10.2 
+-------------------------------
+
+Ecrire un programme qui demande 2 nombres et affiche dit le qu'elle est le plus petit et
+le plus grand
+
+------------------------------------------------------------------------------------------------
+
+Solution
+--------

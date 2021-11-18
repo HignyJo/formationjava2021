@@ -1,0 +1,12 @@
+10.5
+-------------------------------
+
+Ecrire un programme qui demande de rentre un nombre, puis demande si on
+valide cette ce nombre et si il dit non on redemande de rentre un nombre,
+puis on, demande de rentre un caractere et demande si on valide ce caractere,
+si il dit non on redemande de rentre un caractere
+
+------------------------------------------------------------------------------------------------
+
+Solution
+--------

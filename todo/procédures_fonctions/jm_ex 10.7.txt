@@ -1,0 +1,10 @@
+10.7
+-------------------------------
+
+Ecrire un programme où on peut enregistre 20 personnes et a l'aide d'un menu,
+on peut ajouter/ modifier / supprime /affiche /quitter
+
+------------------------------------------------------------------------------------------------
+
+Solution
+--------
