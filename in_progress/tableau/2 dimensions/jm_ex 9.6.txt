@@ -30,3 +30,32 @@ debut ex9.6
 	ind suivant
 		
 fin ex9.6
+
+--------------------------------------------
+
+debut diagonaletableaurectangulaire
+    variables locales
+        var nbrelignes :n <- ...
+        var nbrecolonnes :n <- ...
+        var tab :n [nbrelignes][nbrecolonnes]
+        var tiret :n <- 0
+        var ligne :n <- 0
+        var colonne :n <- 0
+        var i :n <- 1
+    fin variables locales
+
+    // ex 9.6
+
+    tiret <- int((nbrecolonnes / nbrelignes) + 0.99)
+    colonne <- 1
+
+    pour ligne allant de 1 a nbrelignes par pas de 1
+        i <- 1
+        tant que i <= tiret et colonne <= nbrecolonnes
+            tab[ligne][colonne] <- 1
+            colonne <- colonne + 1
+            i <- i + 1
+        fin tant que
+    ligne suivant
+
+fin diagonaletableaurectangulaire

@@ -35,6 +35,47 @@ debut copieTableau
 	
 fin copieTableau
 
+-----------------------------------------
+
+debut 9.2
+    variable locale 
+        CONST TAILLEX : N <- 10
+        CONST TAILLEY : N <- 15
+        var arrayDoubleDim:N[TAILLEX][TAILLEY]
+        var arraySimpleDim : N [TAILLEX*TAILLEY]
+        var i: N <-0
+        var j: N <-0 
+        var cpt : N <-0
+    fin de variable locales 
+    pour i allant de 0  a TAILLEX par pas de 1
+        pour j allant de 0 a TAILLEY par pas de 1
+           arraySimpleDim[cpt]=arrayDoubleDim[i][j]
+           cpt<- cpt +1 
+fin 9.2
+
+------------------------------------------------------
+
+debut copietableau1
+    variables locales
+        var taille :n <- ...
+        var tab1 :n [taille, taille]
+        var tab2 :n [taille * taille]
+        var i :n <- 1
+        var j :n <- 1
+        var k :n <- 1
+    fin variables locales
+
+    // ex 9.2.1
+
+    pour i allant de 1 a taille par pas de 1
+        pour j allant de 1 a taille par pas de 1
+            tab2[k] <- tab1[i, j]
+            k <- k + 1
+        j suivant
+    i suivant
+
+fin copietableau1
+
 |-------------|
 | Solution 2. |--------------------------------------------------------------------------------
 |-------------|
@@ -54,6 +95,27 @@ debut copieTableau
 	
 fin copieTableau
 
+------------------------------------------------------
+
+debut copietableau2
+    variables locales
+        var taille :n <- ...
+        var tab1 :n [taille, taille]
+        var tab2 :n [taille * taille]
+        var i :n <- 1
+        var j :n <- 1
+    fin variables locales
+
+    // ex 9.2.2
+
+    pour i allant de 1 a taille par pas de 1
+        pour j allant de 1 a taille par pas de 1
+            tab2[((i - 1) * taille) + j] <- tab1[i, j]
+        j suivant
+    i suivant
+
+fin copietableau2
+
 |-------------|
 | Solution 3. |--------------------------------------------------------------------------------
 |-------------|
@@ -71,3 +133,32 @@ debut copieTableau
 	
 	
 fin copieTableau
+
+---------------------------------------------------
+
+debut copietableau3
+    variables locales
+        var taille :n <- ...
+        var tab1 :n [taille, taille]
+        var tab2 :n [taille * taille]
+        var i :n <- 1
+        var ligne :n <- 1
+        var colonne :n <- 1
+    fin variables locales
+
+    // ex 9.2.3
+
+    pour i allant de 1 a taille * taille par pas de 1
+        si i mod taille = 0
+            alors
+                ligne <- i div taille
+                colonne <- taille
+            sinon
+                ligne <- (i div taille) + 1
+                colonne <- i mod taille
+        fin si
+
+        tab2[i] <- tab1[ligne, colonne]
+    i suivant
+
+fin copietableau3

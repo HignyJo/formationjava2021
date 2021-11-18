@@ -1,0 +1,112 @@
+9.4 Carré magique
+-----------------
+
+Ecrire le programme qui vérifie les sommes de chaque ligne, chaque colonne
+et des deux diagonales d'un tableau numérique carré sont les mêmes
+
+------------------------------------------------------------------------------------------------
+
+Solution
+--------
+
+debut 9.4
+    variable locale
+        CONST TAILLEX : N <- 2
+        CONST TAILLEY : N <- 2
+        var array:N[TAILLEX][TAILLEY] // on considere qu'il est remplis
+        var array2:N[TAILLEX+2]// initialise a 0
+        var i: N <-0
+        var j: N <-0 
+        var flag : B <- vrai
+    fin de variable locale
+    pour i allant de 0 a TAILLEX par pas de 1 
+        pour  j  allant de 0  a TAILLEY par pas de 1
+            array2[i] <- array2[i]+array[i][j]
+            si i = j 
+                alors 
+                    array2[TAILLEX+1] <- array2[TAILLEX+1]+array[i][j]
+                fin de si 
+            si j == TailleX-i
+                alors 
+                    array2[TAILLEX+1] <- array2[TAILLEX+1]+array[i][j]
+                fin de si 
+         j suivant 
+        if  i !=  0 et  array2[i] != array2[i-1]
+            alors
+                flag=false   
+            fin de si 
+    
+    si flag et (array2[TAILLEX+1] != array2[0] ||array2[TAILLEX+2] != array2[0])
+        alors
+            flag = false
+        fin de si 
+
+    si  flag 
+        alors
+            affiche "carre"
+        sinon
+            affiche "pas carre"
+        fin si
+i suivant
+
+fin 9.4
+
+----------------------------------------------------------
+
+debut carremagique
+    variables locales
+        var taille :n <- ...
+        var tab :n [taille][taille]
+        var sommeligne :n [taille]
+        var sommecolonne :n [taille]
+        var sommediag1 :n <- 0
+        var sommediag2 :n <- 0
+        var i :n <- 1
+        var j :n <- 1
+        var magique :b vrai
+    fin variables locales
+
+    // ex 9.4
+
+    pour i allant de 1 a taille par pas de 1
+        sommeligne[i] <- 0
+        sommecolonne[i] <- 0
+    i suivant
+
+    pour i allant de 1 a taille par pas de 1
+        pour j allant de 1 a taille par pas de 1
+            sommeligne[i] <- sommeligne[i] + tab[i][j]
+            sommecolonne[j] <- sommecolonne[j] + tab[i][j]
+            si i = j
+                alors
+                    sommediag1 <- sommediag1 + tab[i][j]
+                sinon
+                    si j = taille - i + 1
+                        alors
+                            sommediag2 <- sommediag2 + tab[i][j]
+                    fin si
+            fin si
+        j suivant
+    i suivant
+
+    si sommediag1 = sommediag2
+        alors
+            i <- 1
+            tant que i <= taille - 1 et magique = vrai
+                si sommeligne[i] != sommeligne[i + 1] ou sommecolonne[i] != sommecolonne[i + 1]
+                    alors
+                        magique <- faux
+                fin si
+                i <- i + 1
+            fin tant que
+
+            si magique = vrai
+                alors
+                    afficher "C'est un carré magique !"
+                sinon
+                    afficher "Pas un carré magique !"
+            fin si
+        sinon
+            afficher "Pas un carré magique !"
+    fin si
+fin carremagique

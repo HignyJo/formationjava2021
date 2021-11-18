@@ -1,0 +1,87 @@
+debut 9.5
+    variable locale
+        CONST TAILLEX : N <- 3
+        CONST TAILLEY : N <- 3
+        var array:N[TAILLEX][TAILLEY] // on considere qu'il est remplis
+        var array2:N[TAILLEX][TAILLEY]
+        var i: N <-0
+        var j: N <-0 
+        var tmp : N <-0
+       
+    fin de variable locale
+
+//par 1
+    pour i allant de 0 a TAILLEX par pas de 1
+        pour j allant de 0 a TAILLEy par pas de 1
+            array2[j][TAILLEX-i-1]=array[i][j]
+    
+     pour i allant de 0 a TAILLEX par pas de 1
+        pour j allant de 0 a TAILLEy par pas de 1
+            affiche array[i][j]
+
+//par 2
+    pour i allant de 0 a TAILLEX par pas de 1
+        pour j allant de 0 a TAILLEy  DIV 2 par pas de 1
+            tmp=array2[j][TAILLEX-i-1]
+            array[j][TAILLEX-i-1]=array[i][j]
+            array[i][j]=tmp
+
+     pour i allant de 0 a TAILLEX par pas de 1
+        pour j allant de 0 a TAILLEy par pas de 1
+            affiche array2[i][j]
+
+
+
+fin 9.5
+
+---------------------------------
+
+Debut rotationMatriceCarre
+    VARIABLES LOCALES :
+        CONST TAILLE:N <- 3 // arbitraire
+        VAR matrice:N[TAILLE][TAILLE] // On suppose déjà initialisé
+        VAR ind1:N <- 0
+        VAR ind2:N <- 0
+        VAR tableauTmp:N[TAILLE][TAILLE] // Pour version 1 du problème
+        VAR tmp:N <- 0 // Pour version 2 du problème
+    FIN VARIABLES LOCALES
+    
+    Afficher "Ce programme a pour but de déplacer les valeurs d'un tableau carré d'un quart de tour dans le sens horlogique"
+    
+    Afficher "Version 1 : à l'aide d'un tableau intermédiaire"
+    
+    POUR ind1 ALLANT DE 0 A TAILLE - 1
+        POUR ind2 ALLANT DE 0 A TAILLE - 1
+            tableauTmp[ind2][TAILLE - 1 - ind1] <- matrice[ind1][ind2]
+        ind2 SUIVANT
+    ind1 SUIVANT
+    
+    POUR ind1 ALLANT DE 0 A TAILLE - 1
+        POUR ind2 ALLANT DE 0 A TAILLE - 1
+            matrice[ind1][ind2] <- tableauTmp[ind1][ind2]
+        ind2 SUIVANT
+    ind1 SUIVANT
+    
+    Afficher "Version 2 : à l'aide d'une simple variable intermédiaire
+    
+    // Permuter les lignes du tableau d'abord (si nombre impair, on laisse la ligne du milieu)
+    POUR ind2 ALLANT de 0 A TAILLE - 1
+        POUR ind1 ALLANT DE 0 A (TAILLE DIV 2) - 1
+            tmp <- matrice[ind1][ind2]
+            matrice[ind1][ind2] <- matrice[TAILLE - 1 - ind1][ind2]
+            matrice[TAILLE - 1 - ind1][ind2]] <- tmp
+        ind1 SUIVANT
+    ind2 SUIVANT
+    
+    // Ensuite il faut permutter les diagonales principales (celles allant de haut-gauche à bas-droite)
+    POUR diag ALLANT DE 1 A TAILLE - 1 
+        POUR ind1 ALLANT DE 0 A TAILLE - 1 - diag
+            tmp <- matrice[ind1][ind1 + diag]
+            matrice[ind1][ind1 + diag] <- matrice[ind1 + diag][ind1]
+            matrice[ind1 + diag][ind1] <- tmp
+        ind1 SUIVANT
+    diag SUIVANT
+    
+    // Et là le tableau est inversé. Ça fonctionne pour n'importe quelle taille de tableau normalement
+    
+Fin rotationMatriceCarre

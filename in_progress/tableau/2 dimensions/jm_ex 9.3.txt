@@ -45,3 +45,79 @@ debut ex9.3
 	ind1 suivant
 	
 fin ex9.3
+
+-----------------------------------------
+
+debut 9.3
+    variable locale
+        CONST TAILLEX : N <- 10
+        CONST TAILLEY : N <- 15
+        var array:N[TAILLEX][TAILLEY] // on considere qu'il est remplis
+        var min:N[TAILLEX]
+        var max:N[TAILLEX]
+        var moyenne:N[TAILLEX]
+        var i: N <-0
+        var j: N <-0 
+    fin de variable locale
+    pour i allant de 0 a  TAILLEX par pas de 1 
+        pour j allant de 0 a TAILLEX par pas de 1
+            si j = 0 
+                alors
+                    min[i]=array[i][j]
+                    max[i]=array[i][j]
+                    moyenne[i]=array[i][j]
+                sinon si min[j]<array[i][j]
+                     min[i]=array[i][j]
+                sinon si max[j]>array[i][j] 
+                       max[i]=array[i][j] 
+                fin si
+                moyenne[i]=array[i][j]+moyenne[i]
+        moyenne[i]=moyenne[i]/TailleX
+
+        pour i allant de 0 a TAILLEX par pas de 1
+            affiche moyenne[i] +" " + min[i] +" "+ max[i] +" "
+fin 9.3
+
+--------------------------------------------
+
+debut moyenneminmax
+    variables locales
+        var nbrelignes :n <- ...
+        var nbrecolonnes :n <- ...
+        var tab :n [nbrelignes][nbrecolonnes]
+        var i :n <- 1
+        var j :n <- 1
+        var vmin :n <- -1
+        var vmax :n <- -1
+        var moyenne :n <- 0
+    fin variables locales
+
+    // ex 9.3
+
+    pour i allant de 1 a nbrelignes par pas de 1
+        pour j allant de 1 a nbrecolonnes par pas de 1
+            si j = 1
+                alors
+                    vmin <- tab[i][j]
+                    vmax <- tab[i][j]
+                    moyenne <- tab[i][j]
+                sinon
+                    si tab[i][j] < vmin
+                        alors
+                            vmin <- tab[i][j]
+                        sinon
+                            si tab[i][j] > vmax
+                                alors
+                                    vmax <- tab[i][j]
+                            fin si
+                    fin si
+                    moyenne <- moyenne + tab[i, j]
+            fin si
+        j suivant
+
+        afficher "Moyenne de la ligne ", i, " = ", moyenne / nbrecolonnes
+        afficher "Minimum de la ligne ", i, " = ", vmin
+        afficher "Maximum de la ligne ", i, " = ", vmax
+    i suivant
+
+fin moyenneminmax

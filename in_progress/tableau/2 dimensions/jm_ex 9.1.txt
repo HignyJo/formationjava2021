@@ -32,4 +32,26 @@ debut ex9.1
 	cpt suivant
 	
 fin ex9.1
+
+---------------------------------------------------------------------
+
+debut 9.1
+    variable locales
+        const TAILLE : N <-4
+        var tab:N [TAILLE][TAILLE]
+        var colonne : N <-0
+        var ligne : N <-0
+    fin de variable locales
+    pour ligne allant de 0  a TAILLE-1 par pas de 1
+        pour colonne allant de 0 a TAILLE-1 par pas de 1
+            si ligne = colonne
+                alors
+                    tab[ligne][colonne]=1
+            fin si
+            si ligne=TAILLE-1-colonne
+                alors
+                    tab[ligne][colonne]=2
+            fin si
+    affichage tab        
+fin 9.1
 	
